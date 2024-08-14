@@ -1,26 +1,10 @@
 package Template_Method;
 
-public class Coffee {
-    void prepareRecipe(){
-        boilWater();
-        brewCoffeeGrinds();
-        pourinCup();
-        addSugarAndMilk();
+public class Coffee extends CaffeineBeverage{
+    public void brew(){
+        System.out.println("Dripping Coffee thru the filters");
     }
-
-    private void addSugarAndMilk() {
-        System.out.println("Boilling Water");
-    }
-
-    private void pourinCup() {
-        System.out.println("Dripping Coffee thru filter");
-    }
-
-    private void brewCoffeeGrinds() {
-        System.out.println("Pouring into cup");
-    }
-
-    private void boilWater() {
+    public void addCondiments(){
         System.out.println("Adding Sugar and Milk");
     }
 }
